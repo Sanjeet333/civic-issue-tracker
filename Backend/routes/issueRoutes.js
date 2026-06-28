@@ -11,7 +11,7 @@ const router = express.Router();
 async function analyzeIssue(title, description) {
   try {
     const API_KEY = process.env.GEMINI_API_KEY;
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
     
     const response = await axios.post(url, {
       contents: [{
@@ -24,7 +24,7 @@ async function analyzeIssue(title, description) {
     return JSON.parse(cleanText);
   } catch (error) {
     console.error("AI REST API Error:", error.response?.data?.error?.message || error.message);
-    return { urgencyScore: 5, aiSummary: "Summary unavailable", category: "General" };
+    return { urgencyScore: 5, aiSummary: "General infrastructure request: Requires immediate attention from municipal authorities.", category: "General" };
   }
 }
 

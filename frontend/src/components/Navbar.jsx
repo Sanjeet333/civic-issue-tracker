@@ -31,7 +31,7 @@ const Navbar = () => {
     if (!isOpen) {
       try {
         const token = localStorage.getItem("token");
-        await axios.put("http://localhost:5000/api/issues/notifications/mark-read", {}, {
+        await axios.put("https://civic-issue-tracker-lixd.onrender.com/api/issues/notifications/mark-read", {}, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
