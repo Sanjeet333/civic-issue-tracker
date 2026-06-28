@@ -10,7 +10,13 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// UPDATED: CORS Configuration
+app.use(cors({
+  origin: ["https://civic-issue-tracker-u9i4.vercel.app"], // Aapka Vercel frontend URL
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
+
 app.use(express.json({ limit: '25mb' })); 
 app.use(express.urlencoded({ limit: '25mb', extended: true }));
 

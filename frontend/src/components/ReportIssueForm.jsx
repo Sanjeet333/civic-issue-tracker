@@ -26,7 +26,7 @@ const ReportIssueForm = () => {
 
     try {
       const token = localStorage.getItem("token"); 
-      await axios.post("http://localhost:5000/api/issues/report", data, {
+      await axios.post("https://civic-issue-tracker-lixd.onrender.com/api/issues/report", data, {
         headers: { "Content-Type": "multipart/form-data", "Authorization": `Bearer ${token}` }
       });
       alert("Report Submitted with Location!");

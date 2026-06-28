@@ -14,7 +14,7 @@ const Navbar = () => {
     const fetchNotifications = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/issues/notifications", {
+        const res = await axios.get("https://civic-issue-tracker-lixd.onrender.com/api/issues/notifications", {
           headers: { Authorization: `Bearer ${token}` }
         });
         setNotifications(res.data.data || []);

@@ -12,7 +12,7 @@ const AdminPanel = () => {
     const fetchIssues = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/api/issues", {
+        const response = await axios.get("https://civic-issue-tracker-lixd.onrender.com/api/issues", {
           headers: { Authorization: `Bearer ${token}` }
         });
         setIssues(response.data.data || []);

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'https://civic-issue-tracker-lixd.onrender.com/api' });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('token')) {
