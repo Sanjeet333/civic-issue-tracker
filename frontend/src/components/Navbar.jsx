@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Shield, LogOut, Bell } from "lucide-react";
-import { AuthContext } from "./Context/AuthContext";
+import { AuthContext } from "./context/AuthContext";
 import axios from "axios";
 
 const Navbar = () => {

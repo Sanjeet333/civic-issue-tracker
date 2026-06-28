@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { AuthContext } from "./Context/AuthContext";
+import { AuthContext } from "./context/AuthContext";
 import Navbar from "./Navbar";
 import CitizenDashboard from "./CitizenDashboard";
 import ReportIssueForm from "./ReportIssueForm";
