@@ -26,7 +26,7 @@ const AdminPanel = () => {
   const handleStatusChange = async (id, newStatus) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.put(`http://localhost:5000/api/issues/${id}`, 
+      await axios.put(`https://civic-issue-tracker-lixd.onrender.com/api/issues/${id}`, 
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
